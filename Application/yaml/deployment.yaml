@@ -2,18 +2,18 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
 # Set your lab user name
-  name: <userName>-hello-world
+  name: user4-hello-world
 spec:
   replicas: 3
   selector:
     matchLabels:
 # Set your lab user name
-      app: <userName>-hello-world
+      app: user4-hello-world
   template:
     metadata:
       labels:
 # Set your lab user name
-        app: <userName>-hello-world
+        app: user4-hello-world
     spec:
       containers:
         - resources: {}
@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # Update with the image you build in part 1
-          image: 'quay.io/<quay-userName>/<imageName>:<Tag>'
+          image: 'quay.io/comaor/openshiftcourse:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
