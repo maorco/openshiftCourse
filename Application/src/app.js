@@ -4,7 +4,7 @@ const router = express.Router();
 var port = process.env.PORT || 8080;
 
 router.get('/', function (req, res) {
-  res.send(`Hello World!`);
+  res.send(`עדן אתה בסדר סך הכל!`);
 });
 
 app.use('/', router);
